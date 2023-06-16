@@ -1,8 +1,7 @@
 import React from "react";
-import { Book, ExtendedBook } from "../../api/types";
+
 import styles from "./CartList.module.css";
 import CartItem from "../CartItem/CartItem";
-import Typography from "../Typography/Typography";
 import { ExtendedBookWithCount } from "../../store/categories/categories.types";
 
 interface CartListBook {

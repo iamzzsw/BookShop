@@ -1,4 +1,5 @@
-import React, { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
+
 import styles from "./Footer.module.css";
 import Typography from "../Typography/Typography";
 import { usePersistedState } from "../../hooks/usePersistedState copy";
@@ -19,15 +20,11 @@ const Footer = () => {
 
   return (
     <div className={styles.container}>
-      <Typography>&copy;2022 Bookstore</Typography>
+      <Typography>&copy;2023 Bookstore</Typography>
       <div className={styles.theme}>
-        {/* <label htmlFor="theme">
-          <Typography color="secondary" variant="p">
-            {themeName}
-          </Typography>
-        </label>
-        <input type="checkbox" name="theme" id="theme" onChange={changeTheme} /> */}
-        <button onClick={changeTheme}>{themeName}</button>
+        <button onClick={changeTheme} className={styles.button}>
+          {themeName}
+        </button>
       </div>
       <Typography>All rights reserved</Typography>
     </div>

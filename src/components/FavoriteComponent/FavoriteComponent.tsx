@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCategoriesSlice } from "../../store/categories/categories.selectors";
+import { NavLink } from "react-router-dom";
+
+import { getCategoriesSlice, getUser } from "../../store/categories/categories.selectors";
 import FavoriteList from "../FavoriteList/FavoriteList";
 import { AppDispatch } from "../../store";
 import { addAllBook } from "../../store/categories/categories.reducer";
 import Typography from "../Typography/Typography";
 import styles from "./FavoriteComponent.module.css";
-import { NavLink } from "react-router-dom";
 
 export const getFavorites = () => {
   return window.localStorage.getItem("favorites");
@@ -19,6 +20,7 @@ export const setFavorites = (favorites: string) => {
 const FavoriteComponent = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { favorite } = useSelector(getCategoriesSlice);
+  const user = useSelector(getUser);
 
   useEffect(() => {
     let favorites = getFavorites();
@@ -36,10 +38,13 @@ const FavoriteComponent = () => {
         </Typography>
       </NavLink>
       <FavoriteList books={favorite}></FavoriteList>
-      {favorite.length === 0 ? (
-        <Typography variant="h2" className={styles.text}>
-          favorite list is empty
-        </Typography>
+      {user ? (
+        <NavLink to="/signIn" className={styles.link}>
+          {" "}
+          <Typography variant="h2" className={styles.text}>
+            You need to log in
+          </Typography>
+        </NavLink>
       ) : (
         ""
       )}

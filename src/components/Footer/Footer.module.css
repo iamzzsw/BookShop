@@ -17,3 +17,10 @@
 .theme {
   display: flex;
 }
+
+.button {
+  padding: 8px 20px;
+  background-color: var(--button-color);
+  border: none;
+  color:#fff;
+}

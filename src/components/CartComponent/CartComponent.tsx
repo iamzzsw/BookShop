@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+
 import { AppDispatch } from "../../store";
 import Typography from "../Typography/Typography";
 import { getCategoriesSlice, getTotalPrice } from "../../store/categories/categories.selectors";
-import { useEffect } from "react";
 import { addAllBookToCart } from "../../store/categories/categories.reducer";
 import CartList from "../CartList/CartList";
 import Check from "../Check/Check";
-import NewBooks from "../NewBooks/NewBooks";
-import { NavLink } from "react-router-dom";
 import styles from "./CartComponent.module.css";
 
 export const getCart = () => {
@@ -36,7 +36,6 @@ const CartComponent = () => {
       <Typography variant="h1">your cart</Typography>
       <CartList books={cart}></CartList>
       <Check sum={totalPrice}></Check>
-      {/* <Typography>{totalPrice.toFixed(2)}</Typography> */}
     </>
   );
 };

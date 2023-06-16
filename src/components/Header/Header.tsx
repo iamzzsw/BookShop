@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import styles from "./Header.module.css";
-import Icons from "../Icons/Icons";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { resetBooks, resetQuery, setQueryValue } from "../../store/books/books.reducer";
+
+import styles from "./Header.module.css";
+import Icons from "../Icons/Icons";
+import { resetQuery, setQueryValue } from "../../store/books/books.reducer";
 
 const Header = () => {
   const [searchValue, setSearcheValue] = useState("");

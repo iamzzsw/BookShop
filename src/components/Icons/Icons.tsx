@@ -1,8 +1,6 @@
 import React from "react";
 import cn from "classnames";
 
-import { ReactComponent as Chevron } from "images/icons/chevron.svg";
-
 import { ReactComponent as LogoIcon } from "./svg/Bookstore.svg";
 import { ReactComponent as LikeIcon } from "./svg/Like.svg";
 import { ReactComponent as BasketIcon } from "./svg/Basket.svg";

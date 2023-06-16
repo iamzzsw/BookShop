@@ -1,7 +1,6 @@
 import React from "react";
 
 import Button from "../Button/Button";
-
 import styles from "./LoadMoreButton.module.css";
 
 interface LoadMoreButtonProps {

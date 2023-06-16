@@ -1,8 +1,8 @@
 import shuffle from "lodash.shuffle";
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./NewBooks.module.css";
 
+import styles from "./NewBooks.module.css";
 import { Book } from "../../api/types";
 import { getNewBooks } from "../../api/books/books";
 import BooksList from "../BooksList/BooksList";

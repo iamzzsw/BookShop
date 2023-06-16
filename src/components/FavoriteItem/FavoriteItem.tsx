@@ -1,12 +1,10 @@
 import React from "react";
-import { Book } from "../../api/types";
+import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import styles from "./FavoriteItem.module.css";
 import Icons from "../Icons/Icons";
 import Typography from "../Typography/Typography";
-import { NavLink } from "react-router-dom";
-import { useDidUpdate } from "../../hooks/useDidUpdate";
-import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store";
 import { resetFavorite } from "../../store/categories/categories.reducer";
 

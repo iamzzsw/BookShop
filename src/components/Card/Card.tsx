@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./Card.module.css";
 import cn from "classnames";
 
+import styles from "./Card.module.css";
 import Typography from "../Typography/Typography";
 
 interface CardProps {

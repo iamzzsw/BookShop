@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { Book, ExtendedBook } from "../../api/types";
+
+import { ExtendedBook } from "../../api/types";
 import FavoriteItem from "../FavoriteItem/FavoriteItem";
 import Typography from "../Typography/Typography";
-
 import styles from "./FavoriteList.module.css";
 
 interface FavoriteListProps {

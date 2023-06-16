@@ -1,8 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 import styles from "./CartItem.module.css";
 import Typography from "../Typography/Typography";
-import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store";
 import {
   decrementCount,

@@ -1,6 +1,5 @@
 import Button from "../Button/Button";
 import Typography from "../Typography/Typography";
-
 import styles from "./Check.module.css";
 
 interface CheckProps {

@@ -18,7 +18,7 @@
 
 .primary {
   background: var(--button-color);
-  color: var(--main-bg-color);
+  color: #fff;
 }
 
 .secondary {

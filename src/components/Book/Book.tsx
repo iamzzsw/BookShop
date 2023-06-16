@@ -1,18 +1,17 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Book, ExtendedBook } from "../../api/types";
-import Title from "../Title/Title";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+
+import { ExtendedBook } from "../../api/types";
 import styles from "./Book.module.css";
 import Typography from "../Typography/Typography";
 import Button from "../Button/Button";
 import Tabs, { Tab } from "../Tabs/Tabs";
-import { NavLink } from "react-router-dom";
 import Icons from "../Icons/Icons";
 import Subscribe from "../Subscribe/Subscribe";
 import { AppDispatch } from "../../store";
-import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addToFavorite } from "../../store/categories/categories.reducer";
-import { isBookFavorite, isBookInCart } from "../../store/categories/categories.selectors";
-import FavotiteIcon from "../Icons/svg/Vector.svg";
+import { getUser, isBookFavorite, isBookInCart } from "../../store/categories/categories.selectors";
 import NewBooks from "../NewBooks/NewBooks";
 import EmptyStar from "./stars/free-icon-favorite-7612357.png";
 import Star from "./stars/free-icon-favorite-7612719.png";
@@ -41,6 +40,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
   const dispatch = useDispatch<AppDispatch>();
   const isFav = useSelector(isBookFavorite);
   const isCart = useSelector(isBookInCart);
+  const user = useSelector(getUser);
 
   const handleClick = () => {
     dispatch(addToFavorite(book));
@@ -65,7 +65,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
       <div className={styles.container}>
         <div className={styles.image}>
           <img src={book.image} alt={book.title} />
-          {!isFav && (
+          {!isFav && !user && (
             <div className={styles.favorite}>
               <button className={styles.likeButton} onClick={handleClick}>
                 <Icons name="redLike"></Icons>

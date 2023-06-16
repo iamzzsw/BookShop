@@ -26,7 +26,13 @@
 }
 
 .button {
+  display: flex;
+  justify-content: flex-end;
   width: 50%;
-  margin: 0 auto;
   margin-top: 60px;
 }
+
+.saveBut {
+  margin-right: 32px ;
+}
+

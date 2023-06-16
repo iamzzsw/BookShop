@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./SignInComponent.module.css";
 import Typography from "../Typography/Typography";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
-import { useNavigate } from "react-router-dom";
 import { validateFormBeforeSubmit } from "./helpers/helper";
-import { useDispatch } from "react-redux";
 
 export interface FormValues {
   email: string;
@@ -31,8 +31,6 @@ export const defUserData = {
 const SignInComponent: React.FC = () => {
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
-  const dispach = useDispatch();
-  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const navigate = useNavigate();
 
@@ -62,7 +60,6 @@ const SignInComponent: React.FC = () => {
       setErrors({});
       setValues(initialValues);
       navigate(`/`);
-      //   dispach(addUser)
     }
   };
 
