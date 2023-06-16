@@ -1,0 +1,21 @@
+.label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  height: 56px;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  margin: 20px 32px 20px 0;
+}
+
+.helpTextError {
+  color: red;
+}

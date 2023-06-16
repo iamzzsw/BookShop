@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.content {
+  height: 480px;
+  min-width: 544px;
+  padding: 40px 32px 40px;
+}
+.title {
+  text-align: center;
+}
+
+.line {
+  margin-top: 20px;
+  border: 1px solid var(--text-primary);
+}
+
+.text {
+  margin-bottom: 40px;
+}

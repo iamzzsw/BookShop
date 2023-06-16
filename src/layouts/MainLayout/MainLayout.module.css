@@ -1,0 +1,25 @@
+.app {
+  background-color: var(--main-bg-color);
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 104px;
+  margin-bottom: 72px;
+}
+
+.content {
+  min-height: calc(
+    100vh - 269px
+  ); /* .header height + .header margin-bottom + .footer height = 174 */
+}
+
+.footer {
+  height: 93px;
+  box-sizing: border-box;
+}

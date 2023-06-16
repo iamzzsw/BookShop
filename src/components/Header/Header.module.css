@@ -1,0 +1,45 @@
+.wrapper {
+  height: 103px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.search {
+  /* border: none; */
+  width: 542px;
+  height: 56px;
+  padding-left: 20px;
+}
+
+.line {
+  border: 1px solid #e7e7e7;
+  margin: 0;
+}
+
+.searchBlock {
+  display: flex;
+  position: relative;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+}
+.buttonSearch {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.iconRed {
+  color: red;
+}

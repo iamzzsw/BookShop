@@ -1,0 +1,23 @@
+:root {
+  --main-bg-color: #ffffff;
+  --post-bg-color: #ffffff;
+  --text-primary: #313037;
+  --text-secondary: #a8a8a8;
+  --border-color: #e7e7e7;
+  --orange-color: #fee9e2;
+  --purple-color: #f4eefd;
+  --blue-color: #d7e4fd;
+  --green-color: #caeff0;
+  --button-color: #313037;
+  --purple-color-subscribe: #f4eefd;
+}
+
+body[data-theme="dark"] {
+  --main-bg-color: #313037;
+  --post-bg-color: #626266;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.5);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --button-color: #626266;
+  --purple-color-subscribe: #64547c;
+}

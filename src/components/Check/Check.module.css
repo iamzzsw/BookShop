@@ -1,0 +1,11 @@
+.container {
+  width: 271px;
+  margin-left: calc(100% - 271px);
+  margin-top: 97px;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}

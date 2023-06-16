@@ -1,0 +1,12 @@
+.text {
+  margin-top: 50px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.back {
+  margin-bottom: 40px;
+  cursor: pointer;
+}

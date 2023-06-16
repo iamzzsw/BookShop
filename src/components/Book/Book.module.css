@@ -1,0 +1,102 @@
+.image {
+  width: 544px;
+  height: 472px;
+  background-color: #fee9e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  width: 448px;
+  height: 472px;
+}
+
+.stateLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.desc {
+  text-align: right;
+}
+
+.more {
+  margin-top: 16px;
+}
+
+.button {
+  margin-top: 59px;
+}
+
+.preview {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.alldesc {
+  margin-top: 49px;
+}
+
+.back {
+  margin-bottom: 37px;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.favorite {
+  width: 56px;
+  height: 56px;
+  background-color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icons {
+  margin: 48px 0 0 0;
+  width: 80px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.likeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonInCart {
+  margin-top: 59px;
+  background-color: var(--text-secondary);
+}
+
+.rating {
+  width: 112px;
+  height: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating img {
+  width: 14px;
+  height: 13px;
+}

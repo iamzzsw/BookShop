@@ -1,0 +1,21 @@
+.container {
+  margin-top: 72px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 49px;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.button p {
+  font-size: 24px;
+}

@@ -1,0 +1,39 @@
+.image {
+  width: 256px;
+  height: 192px;
+  background-color: var(--blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  margin-top: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+}
+.text {
+  padding: 36px 0 0 32px;
+}
+
+.about {
+  padding: 8px 0 24px 0;
+}
+.link {
+  list-style-type: none;
+  text-decoration: none;
+}
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

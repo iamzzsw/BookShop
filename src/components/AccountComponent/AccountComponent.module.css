@@ -1,0 +1,32 @@
+.back {
+  margin-bottom: 37px;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  margin-bottom: 48px;
+}
+
+.group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.password {
+  margin-top: 48px;
+}
+
+.input {
+  width: 528px;
+}
+
+.button {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
