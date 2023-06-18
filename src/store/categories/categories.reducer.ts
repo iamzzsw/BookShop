@@ -52,7 +52,6 @@ const categories = createSlice({
     },
     incrementCount: (state, action: PayloadAction<ExtendedBook["isbn13"]>) => {
       let book = state.cart.find((book) => book.isbn13 === action.payload);
-      console.log(book?.count);
       if (book) {
         book.count += 1;
       }

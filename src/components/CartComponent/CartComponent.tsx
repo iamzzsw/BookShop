@@ -23,7 +23,6 @@ const CartComponent = () => {
     let cart = getCart();
     if (cart) {
       dispatch(addAllBookToCart(JSON.parse(cart)));
-      console.log(cart);
     }
   }, []);
   return (

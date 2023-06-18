@@ -6,6 +6,7 @@ import Typography from "../Typography/Typography";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import { validateFormBeforeSubmit } from "./helpers/helper";
+import { useForm } from "../../hooks/useForm";
 
 export interface FormValues {
   email: string;
@@ -29,39 +30,24 @@ export const defUserData = {
 };
 
 const SignInComponent: React.FC = () => {
-  const [values, setValues] = useState<FormValues>(initialValues);
-  const [errors, setErrors] = useState<FormErrors>({});
-
-  const navigate = useNavigate();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-
-    if (name === "Name") {
-      setValues({ ...values, email: value });
-    } else if (name === "Password") {
-      setValues({ ...values, password: value });
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
+  const {values,setValues,  errors, setErrors, handleChange, handleSubmit} = useForm<FormValues>({
+    initialValues: initialValues,
+    onSubmit: () => {
     const curErrors = validateFormBeforeSubmit(
       values,
       JSON.parse(localStorage.getItem("user") as string)
     );
-    console.log(curErrors);
-
     if (curErrors) {
       setErrors(curErrors);
     } else {
-      console.log(values);
       setErrors({});
       setValues(initialValues);
       navigate(`/`);
     }
-  };
+    },
+  });
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const userFromStorage = localStorage.getItem("user");
@@ -83,17 +69,17 @@ const SignInComponent: React.FC = () => {
             placeholder="Your email"
             onChange={handleChange}
             type="text"
-            name="Name"
-            value={values.email}
+            name="email"
+            value={values?.email}
             error={!!errors.email}
             helpedText={errors.email}
           ></Input>
           <Input
-            label="Password"
+            label="password"
             placeholder="Your password"
             onChange={handleChange}
             type="password"
-            name="Password"
+            name="password"
             value={values.password}
             error={!!errors.password}
             helpedText={errors.password}

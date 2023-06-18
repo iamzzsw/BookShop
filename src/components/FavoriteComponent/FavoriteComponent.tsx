@@ -26,7 +26,6 @@ const FavoriteComponent = () => {
     let favorites = getFavorites();
     if (favorites) {
       dispatch(addAllBook(JSON.parse(favorites)));
-      console.log(favorites);
     }
   }, []);
 

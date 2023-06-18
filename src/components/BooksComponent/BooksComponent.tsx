@@ -24,7 +24,6 @@ const Books: React.FC = () => {
 
   useDidUpdate(() => {
     if (query) {
-      console.log(query, page);
       dispatch(getBooks());
     }
   }, [query, page]);

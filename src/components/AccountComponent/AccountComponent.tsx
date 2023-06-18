@@ -58,7 +58,6 @@ const AccountComponent = () => {
         setErrors({});
       },
     });
-  console.log(values);
 
   useEffect(() => {
     let currentUser = getUserFromLocalStore();
@@ -87,6 +86,7 @@ const AccountComponent = () => {
             value={values?.name}
             onChange={handleChange}
             error={!!errors.name}
+            helpedText={errors.name}
           ></Input>
           <Input
             placeholder="Email"

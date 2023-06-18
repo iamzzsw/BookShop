@@ -2,7 +2,7 @@ import { useLayoutEffect, useState } from "react";
 
 import styles from "./Footer.module.css";
 import Typography from "../Typography/Typography";
-import { usePersistedState } from "../../hooks/usePersistedState copy";
+import { usePersistedState } from "../../hooks/usePersistedState";
 
 const Footer = () => {
   const [themeName, setThemeName] = usePersistedState<"dark" | "light">({

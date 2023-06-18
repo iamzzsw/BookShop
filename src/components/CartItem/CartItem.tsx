@@ -28,7 +28,6 @@ const CartItem: React.FC<ExtendedBookWithCount> = ({
   const oneBookPrice = `$${(count * Number(price.slice(1))).toFixed(2)}`;
 
   const increment = () => {
-    console.log(count);
     dispatch(incrementCount(isbn13));
   };
 
