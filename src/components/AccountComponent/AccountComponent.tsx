@@ -29,16 +29,17 @@ export const setUserToLocalStore = (user: string) => {
 
 const signUpValidation = (values: UserDefault) => {
   const errors: Errors<UserDefault> = {};
+  const { name, email, password } = values;
 
-  if (!values.name) {
-    errors.password = "required field";
+  if (name.length < 1) {
+    errors.name = "required field";
   }
 
-  if (!values.email) {
+  if (email.length < 1) {
     errors.email = "required field";
   }
 
-  if (!values.password) {
+  if (password) {
     errors.password = "required field";
   }
 
@@ -95,6 +96,7 @@ const AccountComponent = () => {
             label="Email"
             value={values?.email}
             onChange={handleChange}
+            helpedText={errors.email}
             error={!!errors.email}
           ></Input>
         </div>
@@ -110,6 +112,7 @@ const AccountComponent = () => {
             onChange={handleChange}
             error={!!errors.password}
             name="password"
+            helpedText={errors.password}
             readOnly
           ></Input>
         </div>
