@@ -2,11 +2,13 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 import { ExtendedBookWithCount, State } from "./categories.types";
 import { ExtendedBook, UserDefault } from "../../api/types";
+import { ReviewsProps } from "../../components/Reviews/Reviews";
 
 const initialState: State = {
   cart: [],
   favorite: [],
   book: null,
+  reviews: [],
 
   loading: false,
   user: null,
@@ -62,6 +64,9 @@ const categories = createSlice({
         book.count -= 1;
       }
     },
+    addReviews: (state, action: PayloadAction<ReviewsProps[]>) => {
+      state.reviews = action.payload;
+    }
   },
 });
 
@@ -76,6 +81,7 @@ export const {
   incrementCount,
   decrementCount,
   addUser,
+  addReviews,
 } = categories.actions;
 
 export default categories.reducer;

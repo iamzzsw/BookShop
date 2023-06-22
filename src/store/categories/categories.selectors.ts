@@ -16,3 +16,5 @@ export const getTotalPrice = (store: RootStore): number =>
   }, 0);
 
 export const getUser = (store: RootStore): State["user"] => store.categories.user;
+
+export const getReviews = (store: RootStore): State['reviews'] => store.categories.reviews;

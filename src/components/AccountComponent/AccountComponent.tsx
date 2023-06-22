@@ -39,7 +39,7 @@ const signUpValidation = (values: UserDefault) => {
     errors.email = "required field";
   }
 
-  if (password) {
+  if (!password) {
     errors.password = "required field";
   }
 
@@ -118,8 +118,18 @@ const AccountComponent = () => {
         </div>
 
         <div className={styles.group}>
-          <Input placeholder="New password" label="New password"></Input>
-          <Input placeholder="Confirm new password" label="Confirm new password"></Input>
+          <Input
+            placeholder="New password"
+            label="New password"
+            name="new_password"
+            onChange={handleChange}
+          ></Input>
+          <Input
+            placeholder="Confirm new password"
+            label="Confirm new password"
+            name="confirm_new_password"
+            onChange={handleChange}
+          ></Input>
         </div>
         <div className={styles.button}>
           <Button type="submit" className={styles.saveBut}>

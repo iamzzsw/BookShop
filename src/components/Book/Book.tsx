@@ -15,6 +15,7 @@ import { getUser, isBookFavorite, isBookInCart } from "../../store/categories/ca
 import NewBooks from "../NewBooks/NewBooks";
 import EmptyStar from "./stars/free-icon-favorite-7612357.png";
 import Star from "./stars/free-icon-favorite-7612719.png";
+import Reviews from "../Reviews/Reviews";
 
 const tabs: Tab[] = [
   {
@@ -140,6 +141,9 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
       )}
       {activeTab === "authors" && (
         <Typography className={styles.alldesc}>{book.authors}</Typography>
+      )}
+      {activeTab === 'reviews' && (
+        <Reviews></Reviews>
       )}
       <div className={styles.icons}>
         <Icons name="facebook"></Icons>
